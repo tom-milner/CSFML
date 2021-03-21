@@ -17,7 +17,7 @@ csfml_set_option(CMAKE_BUILD_TYPE Release STRING "Choose the type of build (Debu
 project(CSFML)
 
 # include the configuration file
-include(${CMAKE_SOURCE_DIR}/cmake/Config.cmake)
+include(${PROJECT_SOURCE_DIR}/cmake/Config.cmake)
 
 # setup version numbers
 set(VERSION_MAJOR 2)
