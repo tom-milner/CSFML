@@ -2,18 +2,18 @@
 /// \mainpage
 ///
 /// \section welcome Welcome
-/// Welcome to the official SFML documentation for C. Here you will find a detailed
-/// view of all the SFML <a href="./globals_func.htm">functions</a>.<br/>
+/// Welcome to the official CSFML documentation for C. Here you will find a detailed
+/// view of all the CSFML <a href="./globals_func.htm">functions</a>.<br/>
 /// If you are looking for tutorials, you can visit the official website
 /// at <a href="http://www.sfml-dev.org/">www.sfml-dev.org</a>.
 ///
 /// \section example Short example
-/// Here is a short example, to show you how simple it is to use SFML in C :
+/// Here is a short example, to show you how simple it is to use CSFML in C :
 ///
 /// \code
 ///
-/// #include <SFML/Audio.h>
-/// #include <SFML/Graphics.h>
+/// #include <CSFML/Audio.h>
+/// #include <CSFML/Graphics.h>
 /// 
 /// int main()
 /// {
@@ -27,7 +27,7 @@
 ///     sfEvent event;
 ///
 ///     /* Create the main window */
-///     window = sfRenderWindow_create(mode, "SFML window", sfResize | sfClose, NULL);
+///     window = sfRenderWindow_create(mode, "CSFML window", sfResize | sfClose, NULL);
 ///     if (!window)
 ///         return EXIT_FAILURE;
 ///
@@ -43,7 +43,7 @@
 ///     if (!font)
 ///         return EXIT_FAILURE;
 ///     text = sfText_create();
-///     sfText_setString(text, "Hello SFML");
+///     sfText_setString(text, "Hello CSFML");
 ///     sfText_setFont(text, font);
 ///     sfText_setCharacterSize(text, 50);
 /// 

@@ -53,8 +53,9 @@ macro(csfml_add_library target)
         set_target_properties(${target} PROPERTIES COMPILE_FLAGS -fvisibility=hidden)
     endif()
 
-    # link the target to its external dependencies (C++ SFML libraries)
+    # link the target to its external dependencies (C++ CSFML libraries)
     target_link_libraries(${target} ${THIS_DEPENDS})
+    message(STATUS "${target} linked to ${THIS_DEPENDS}")
 
     # build dylibs
     if(SFML_OS_MACOSX AND BUILD_SHARED_LIBS)
