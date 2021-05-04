@@ -13,8 +13,11 @@ endmacro()
 # this has to be done before the project() instruction!
 csfml_set_option(CMAKE_BUILD_TYPE Release STRING "Choose the type of build (Debug or Release)")
 
+
 # project name
 project(CSFML)
+add_subdirectory(${PROJECT_SOURCE_DIR}/lib/SFML)
+
 
 # include the configuration file
 include(./cmake/Config.cmake)
@@ -24,6 +27,7 @@ include(./cmake/Config.cmake)
 set(VERSION_MAJOR 2)
 set(VERSION_MINOR 5)
 set(VERSION_PATCH 0)
+
 
 # add the CSFML header path
 include_directories(${PROJECT_SOURCE_DIR}/include)
@@ -62,6 +66,7 @@ if (SFML_OS_WINDOWS)
     endif ()
 endif ()
 
+
 # add the subdirectories
 add_subdirectory(${PROJECT_SOURCE_DIR}/src/CSFML)
 if (CSFML_BUILD_DOC)
@@ -69,9 +74,9 @@ if (CSFML_BUILD_DOC)
 endif ()
 
 # setup the install rules
-#install(DIRECTORY ${PROJECT_SOURCE_DIR}/include
-#        DESTINATION .
-#        COMPONENT devel
-#        PATTERN ".svn" EXCLUDE)
+install(DIRECTORY ${PROJECT_SOURCE_DIR}/include
+        DESTINATION .
+        COMPONENT devel
+        PATTERN ".svn" EXCLUDE)
 install(FILES license.txt DESTINATION ${INSTALL_MISC_DIR})
 install(FILES readme.txt DESTINATION ${INSTALL_MISC_DIR})
